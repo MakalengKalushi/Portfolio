@@ -521,7 +521,7 @@ footer{
         background-repeat: no-repeat;
         height:320px;
         width:100%;
-        
+        border-radius:8px;
         border: 1px solid white;
         padding: 20px;
         
