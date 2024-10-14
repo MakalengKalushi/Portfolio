@@ -7,22 +7,47 @@
     <title>Makaleng Kalushi</title>
 </head>
 <body>
-    <header>
-        <h1>MK</h1>
+    <header id="home">
+        <h1 >MK</h1>
     
         <button><div class="menu-icon"></div>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                </ul>
+        
+            </div>
 
         </button>
 
         <nav>
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Portfolio</a></li>
-                <a href="" class="cta"> Lets Work!</a>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="Projects.html">Portfolio</a></li>
+                <a href="#contact" class="cta"> Lets Work!</a>
             </ul>
         </nav>
     </header>
+    <script>
+        const menuBtn = document.querySelector('button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        let isShown = false;
+
+        menuBtn.addEventListener('click', () => {
+            if (!isShown) {
+                mobileMenu.style.display = "block";
+                isShown = true;
+            } else {
+                mobileMenu.style.display = "none";
+                isShown = false;
+            }
+        })
+    </script>
+  
 
     <main class="landing">
         <img src="ae.png" alt="photo of me">
@@ -32,7 +57,7 @@
         </div>
     </main>
 
-    <section class="about">
+    <section class="about" id="about">
         <h1>About Me</h1>
         <p> 
             Hi, my name is <span>Kalushi Makaleng</span>, and I’m a front-end web developer. I’m passionate about building websites that truly connect with users. Whether through sleek designs, responsive layouts, or smooth interactions, I strive to create web experiences that are not just visually appealing but also engaging and easy to navigate. I love exploring new technologies and bringing fresh ideas to life, always with the goal of delivering content that’s both functional and enjoyable. As a developer, I’m constantly working on refining my skills and finding better ways to connect users with the brands they love. I believe that through thoughtful, well-crafted websites, I can make a lasting and meaningful impact in the digital world.
@@ -63,7 +88,7 @@
 
     <section class="skills">
 
-        <div class="skill-set">
+        <div class="skill-set"  id="services">
             <h1>Skill Set</h1>
             <h2>Web Development</h2>
             <p>Crafting dynamic websites with HTML, CSS, and JavaScript</p>
@@ -99,7 +124,7 @@
         
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-text">
         <h1>Get In Touch</h1>
         <p>Id love to hear from you! feel free to reach out for collaboration, projects, or any questions</p>
